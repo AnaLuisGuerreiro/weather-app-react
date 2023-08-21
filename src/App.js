@@ -3,19 +3,20 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <footer>
+        This project was coded by{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://portfolio-anaguerreiro.netlify.app/"
+          alt="Ana Guerreiro"
         >
-          Learn React
+          {" "}
+          Ana Guerreiro
+        </a>{" "}
+        and is{" "}
+        <a href="" alt="Github source">
+          open-sourced on Github
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
