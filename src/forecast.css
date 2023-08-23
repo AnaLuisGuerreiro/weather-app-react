@@ -1,0 +1,17 @@
+.Forecast li {
+  background-color: rgb(240, 248, 255, 0.5);
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+.Forecast img {
+  width: 50px;
+}
+.Forecast strong {
+  font-size: 21px;
+}
+.Forecast .minimum_temp {
+  font-size: 15px;
+}
+.Forecast .weekday {
+  font-size: 25px;
+}
