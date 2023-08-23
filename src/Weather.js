@@ -8,13 +8,12 @@ import { Puff } from "react-loader-spinner";
 
 import "./weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
   function searchUrl(response) {
     setWeatherData({
       date: "Monday, 07h00",
       icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-      iconDescription: response.data.weather[0].description,
       city: response.data.city,
       description: response.data.condition.description,
       temp: Math.round(response.data.temperature.current),
@@ -59,9 +58,9 @@ export default function Weather() {
     );
   } else {
     const apiKey = "37ao80323cfe0b171ed40af823227b0t";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=Porto&key=${apiKey}`;
-
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
     axios.get(apiUrl).then(searchUrl);
+
     return (
       <Puff
         height="100"

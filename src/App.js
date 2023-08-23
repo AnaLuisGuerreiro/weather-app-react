@@ -1,8 +1,8 @@
 import "./App.css";
 
+import Weather from "./Weather";
 import Search from "./Search";
 import Forecast from "./Forecast";
-import Weather from "./Weather";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div className="container">
         <Search />
         <div className="background">
-          <Weather />
+          <Weather defaultCity="Porto" />
           <Forecast />
         </div>
       </div>
