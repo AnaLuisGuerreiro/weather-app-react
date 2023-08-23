@@ -1,0 +1,21 @@
+.Weather {
+  background-color: rgb(240, 248, 255);
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.Weather h2 {
+  font-size: 40px;
+}
+.Weather .unit {
+  position: relative;
+  font-size: 18px;
+  top: -15px;
+  font-weight: bolder;
+  color: black;
+}
+
+.Weather .precipitation,
+.wind,
+.humidity {
+  margin-bottom: 5px;
+}
