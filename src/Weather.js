@@ -7,6 +7,7 @@ import "./weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   function searchUrl(response) {
     console.log(response);
     setWeatherData({

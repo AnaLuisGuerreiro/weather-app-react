@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./app.css";
 
 import Weather from "./Weather.js";
@@ -6,17 +5,12 @@ import Forecast from "./Forecast";
 import Search from "./Search";
 
 function App() {
-  const [weatherData, setWeatherData] = useState(null);
-
-  function handleSearch(data) {
-    setWeatherData(data);
-  }
   return (
     <div className="App">
       <div className="container">
         <div className="background">
-          <Search onSearch={handleSearch} />
-          <Weather data={weatherData} defaultCity="Lisbon" />
+          <Search />
+          <Weather defaultCity="Lisbon" />
           <Forecast />
         </div>
       </div>
