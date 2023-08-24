@@ -2,14 +2,12 @@ import "./app.css";
 
 import Weather from "./Weather.js";
 import Forecast from "./Forecast";
-import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <div className="background">
-          <Search />
           <Weather defaultCity="Lisbon" />
           <Forecast />
         </div>

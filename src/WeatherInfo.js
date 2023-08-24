@@ -4,6 +4,7 @@ import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import { faDropletSlash } from "@fortawesome/free-solid-svg-icons";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 
+import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
 
 import "./weather.css";
@@ -16,7 +17,7 @@ export default function WeatherInfo(props) {
       </p>
       <div className="row">
         <div className="col mb-3">
-          <img src={props.data.icon} alt={props.data.iconDescription} />
+          <WeatherIcon code={props.data.icon} />
           <h1>{props.data.city}</h1>
           <span className="text-capitalize">{props.data.description}</span>
         </div>
