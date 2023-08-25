@@ -21,15 +21,21 @@
 }
 .Weather h2 {
   font-size: 40px;
-  color: #73c5e9;
+  color: var(--light-blue);
 }
-.Weather .unit {
+.Units .unit {
   position: relative;
   font-size: 18px;
   top: -15px;
   font-weight: bolder;
-  color: var(--text-color);
+  color: var(--light-blue);
+  text-decoration: none;
 }
+.unit a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 .Weather .precipitation,
 .wind,
 .humidity {

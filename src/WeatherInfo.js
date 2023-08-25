@@ -4,7 +4,8 @@ import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import { faDropletSlash } from "@fortawesome/free-solid-svg-icons";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 
-import WeatherIcon from "./WeatherIcon";
+import WeatherIcon from "./Icons";
+import Units from "./Units";
 import FormattedDate from "./FormattedDate";
 
 import "./weather.css";
@@ -23,10 +24,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col">
           {" "}
-          <h2>
-            {props.data.temp}
-            <span className="unit">ºC</span>
-          </h2>
+          <Units celsius={props.data.temp} />
           <ul className="list-unstyled">
             <li className="precipitation">
               <FontAwesomeIcon icon={faDroplet} />
