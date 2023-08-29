@@ -1,7 +1,7 @@
 import Weather from "./Weather.js";
 import Forecast from "./Forecast";
 
-import "./app.css";
+import "./App.css";
 
 function App() {
   return (
