@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./forecast.css";
 
-import Icons from "./Icons";
+import DayForecast from "./DayForecast";
 import axios from "axios";
 
 export default function Forecast(props) {
@@ -19,15 +19,7 @@ export default function Forecast(props) {
         <ul className="list-unstyled mt-2">
           <li>
             <div className="row align-items-center">
-              <div className="col weekday">Mon</div>
-              <div className="col">
-                <Icons code="clear-sky-day" size={30} />
-              </div>
-              <div className="col">
-                {" "}
-                <strong className="max-temp">20º/ </strong>
-                <span className="minimum-temp">12º</span>
-              </div>
+              <DayForecast data={forecastData[0]} />
             </div>
           </li>
         </ul>
