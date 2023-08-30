@@ -23,8 +23,9 @@ export default function Units(props) {
         <h2>
           {props.celsius}
           <span className="unit">
-            ºC |
+            ºC
             <a href="/" onClick={showFharenheit}>
+              <span> | </span>
               ºF
             </a>
           </span>
@@ -38,7 +39,8 @@ export default function Units(props) {
           {Math.round(fahrenheit())}
           <span className="unit">
             <a href="/" onClick={showCelsius}>
-              ºC |
+              ºC
+              <span> | </span>
             </a>
             ºF
           </span>

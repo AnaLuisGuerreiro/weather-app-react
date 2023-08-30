@@ -6,6 +6,7 @@ import { Puff } from "react-loader-spinner";
 
 import WeatherInfo from "./WeatherInfo";
 import "./weather.css";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -14,6 +15,7 @@ export default function Weather(props) {
   function searchUrl(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       date: new Date(response.data.time * 1000),
       icon: response.data.condition.icon,
       city: response.data.city,
@@ -61,6 +63,7 @@ export default function Weather(props) {
         <div className="Weather">
           <WeatherInfo data={weatherData} />
         </div>
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
