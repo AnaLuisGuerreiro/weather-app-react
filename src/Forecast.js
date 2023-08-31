@@ -31,7 +31,7 @@ export default function Forecast(props) {
       <div className="Forecast">
         <ul className="list-unstyled mt-2">
           {forecastData.map(function (dailyForecast, index) {
-            if (index < 5) {
+            if (index < 6) {
               return (
                 <li>
                   <div className="row align-items-center" key={index}>
