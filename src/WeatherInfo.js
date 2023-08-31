@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 import { faDropletSlash } from "@fortawesome/free-solid-svg-icons";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 
