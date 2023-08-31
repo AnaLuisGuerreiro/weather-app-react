@@ -25,11 +25,8 @@ export default function WeatherInfo(props) {
         <div className="col">
           {" "}
           <Units celsius={props.data.temp} />
+          <span>--------------</span>
           <ul className="list-unstyled">
-            <li className="precipitation">
-              <FontAwesomeIcon icon={faDroplet} />
-              <span> Precipitation: %</span>
-            </li>
             <li className="humidity">
               <FontAwesomeIcon icon={faDropletSlash} />
               <span> Humidity: {props.data.humidity} km/h</span>
