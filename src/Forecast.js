@@ -13,15 +13,20 @@ export default function Forecast(props) {
   }
 
   if (loaded) {
-    console.log(forecastData);
     return (
       <div className="Forecast">
         <ul className="list-unstyled mt-2">
-          <li>
-            <div className="row align-items-center">
-              <DayForecast data={forecastData[0]} />
-            </div>
-          </li>
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <li>
+                  <div className="row align-items-center" key={index}>
+                    <DayForecast data={dailyForecast} />
+                  </div>
+                </li>
+              );
+            }
+          })}
         </ul>
       </div>
     );
